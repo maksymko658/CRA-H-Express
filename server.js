@@ -11,7 +11,7 @@ const app = express();
 const dev = app.get('env') !== 'production';
 
 if (!dev) {
-	app.dissable('x-powered-by');
+	app.disable('x-powered-by');
 	app.use(compression());
 	app.use(morgan('common'));
 
